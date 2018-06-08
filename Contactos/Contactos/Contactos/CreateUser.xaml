@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Contactos.CreateUser">
+    
+    <StackLayout Orientation="Vertical" Padding="20,50,20,20">
+        <Label Text="Crear una cuenta" TextColor="Blue" FontSize="Large" HorizontalOptions="Center" Margin="0,0,0,20"/>
+        <Entry x:Name="entryNameCu" Placeholder="Nombre"/>
+        <Entry x:Name="entryEmailCu" Placeholder="Correo electronico"/>
+        <Entry x:Name="entryUsernameCu" Placeholder="Usuario"/>
+        <Entry x:Name="entryPasswordCu" Placeholder="Constraseña" IsPassword="True"/>
+        <Button Text="Crear cuenta" Clicked="ClickButtonCreateUser"/>
+    </StackLayout>
+    
+</ContentPage>

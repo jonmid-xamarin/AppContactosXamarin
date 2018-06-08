@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Contactos.UpdateContact">
+
+    <StackLayout Orientation="Vertical" Padding="20,50,20,20">
+        <Label Text="Actualizar contacto" TextColor="Blue" FontSize="Large" HorizontalOptions="Center" Margin="0,0,0,20"/>
+        <Entry x:Name="entryNameUc" Placeholder="Nombre" Text="{Binding Name}"/>
+        <Entry x:Name="entryPhoneUc" Placeholder="Telefono" Text="{Binding Phone}"/>
+        <Entry x:Name="entryEmailUc" Placeholder="Correo electronico" Text="{Binding Email}"/>
+        <Entry x:Name="entryImageUc" Placeholder="Imagen" Text="{Binding Image}"/>
+        <Button Text="Actualizar contacto" Clicked="ClickButtonUpdateContact"/>
+    </StackLayout>
+    
+</ContentPage>

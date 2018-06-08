@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Contactos.ListContacts">
+
+    <StackLayout Padding="10, 20, 10 ,0">
+        <Button Text="Crear contacto" Clicked="ClickButtonShowWindowNewContact"/>
+        <ListView x:Name="listViewContacts">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.ContextActions>
+                            <MenuItem Clicked="ClickUpdateContact" CommandParameter="{Binding .}" Text="Actualizar" />
+                            <MenuItem Clicked="ClickDeleteContact" CommandParameter="{Binding Id}" Text="Eliminar" IsDestructive="True" />
+                        </ViewCell.ContextActions>
+                        <StackLayout Padding="15,0">
+                            <Label Text="{Binding Name}" />
+                            <Label Text="{Binding Email}" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+
+</ContentPage>

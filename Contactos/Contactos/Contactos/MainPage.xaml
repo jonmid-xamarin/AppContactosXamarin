@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Contactos"
+             x:Class="Contactos.MainPage">
+
+    <StackLayout Orientation="Vertical" Padding="20,50,20,20">
+        <Label Text="Ingreso de usuarios" TextColor="Blue" FontSize="Large" HorizontalOptions="Center"/>
+        <Entry x:Name="entryUser" Placeholder="Usuario"/>
+        <Entry x:Name="entryPass" Placeholder="Constraseña" IsPassword="True"/>
+        <Button Text="Ingresar" Clicked="ClickButtonSignIn"/>
+        <Button Text="Crear una cuenta aqui" Clicked="ClickButtonCreateUser"/>
+    </StackLayout>
+
+</ContentPage>
