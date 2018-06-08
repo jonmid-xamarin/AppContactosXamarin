@@ -31,7 +31,15 @@ namespace Contactos
         protected override void OnAppearing()
         {
             base.OnAppearing();
-            ListDataContacts();
+
+            if (Application.Current.Properties.ContainsKey("id_user"))
+            {
+                ListDataContacts();
+            }
+            else
+            {
+                showWindowMainPage();
+            }
         }
 
         // Metodo para listar todos los contactos
@@ -83,6 +91,17 @@ namespace Contactos
         async public void ClickButtonShowWindowNewContact(object sender, EventArgs e)
         {
             await Navigation.PushModalAsync(new CreateContact());
+        }
+
+        public void ClickButtonSignOff(object sender, EventArgs e)
+        {
+            Application.Current.Properties.Clear();
+            showWindowMainPage();
+        }
+
+        async public void showWindowMainPage()
+        {
+            await Navigation.PushModalAsync(new MainPage());
         }
     }
 }

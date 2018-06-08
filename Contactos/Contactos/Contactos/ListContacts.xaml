@@ -5,6 +5,7 @@
 
     <StackLayout Padding="10, 20, 10 ,0">
         <Button Text="Crear contacto" Clicked="ClickButtonShowWindowNewContact"/>
+        <Button Text="Cerrar sesión" Clicked="ClickButtonSignOff"/>
         <ListView x:Name="listViewContacts">
             <ListView.ItemTemplate>
                 <DataTemplate>
